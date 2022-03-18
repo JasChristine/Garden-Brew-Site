@@ -3,8 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { DivinationComponent } from './pages/divination/divination.component';
+import { GalleryComponent } from './pages/divination/sigils/gallery/gallery.component';
+import { MarksComponent } from './pages/divination/sigils/marks/marks.component';
 import { SigilsComponent } from './pages/divination/sigils/sigils.component';
+import { MajorArcanaComponent } from './pages/divination/tarot/major-arcana/major-arcana.component';
+import { MinorArcanaComponent } from './pages/divination/tarot/minor-arcana/minor-arcana.component';
+import { SpreadsComponent } from './pages/divination/tarot/spreads/spreads.component';
 import { TarotComponent } from './pages/divination/tarot/tarot.component';
+import { ReadingComponent } from './pages/divination/tasseomancy/reading/reading.component';
+import { SetUpComponent } from './pages/divination/tasseomancy/set-up/set-up.component';
 import { TasseomancyComponent } from './pages/divination/tasseomancy/tasseomancy.component';
 import { EarthComponent } from './pages/green-craft/earth/earth.component';
 import { GreenCraftComponent } from './pages/green-craft/green-craft.component';
@@ -43,16 +50,70 @@ const routes: Routes = [
       },
       {
         path: 'tarot',
-        component: TarotComponent,
+        children: [
+          {
+            path: '',
+            component: TarotComponent,
+          },
+          {
+            path: 'major-arcana',
+            component: MajorArcanaComponent,
+          },
+          {
+            path: 'minor-arcana',
+            component: MinorArcanaComponent,
+          },
+          {
+            path: 'spreads',
+            component: SpreadsComponent,
+          },
+          {
+            path: '**',
+            redirectTo: '',
+          },
+        ],
       },
       {
         path: 'sigils',
-        component: SigilsComponent,
+        children: [
+          {
+            path: '',
+            component: SigilsComponent,
+          },
+          {
+            path: 'marks',
+            component: MarksComponent,
+          },
+          {
+            path: 'gallery',
+            component: GalleryComponent,
+          },
+          {
+            path: '**',
+            redirectTo: '',
+          },
+        ],
       },
-
       {
         path: 'tasseomancy',
-        component: TasseomancyComponent,
+        children: [
+          {
+            path: '',
+            component: TasseomancyComponent,
+          },
+          {
+            path: 'reading',
+            component: ReadingComponent,
+          },
+          {
+            path: 'set-up',
+            component: SetUpComponent,
+          },
+          {
+            path: '**',
+            redirectTo: '',
+          },
+        ],
       },
       {
         path: '**',

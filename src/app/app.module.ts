@@ -36,6 +36,12 @@ import { PhasesComponent } from './pages/moon-magic/phases/phases.component';
 import { IntentionsComponent } from './pages/moon-magic/intentions/intentions.component';
 import { NavigationComponent } from './shared/navigation/navigation.component';
 import { FooterComponent } from './shared/footer/footer.component';
+import { DivinationNavComponent } from './pages/divination/divination-nav/divination-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -69,6 +75,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     IntentionsComponent,
     NavigationComponent,
     FooterComponent,
+    DivinationNavComponent,
   ],
   imports: [
     BrowserModule,
@@ -78,6 +85,11 @@ import { FooterComponent } from './shared/footer/footer.component';
     NbLayoutModule,
     NbEvaIconsModule,
     MatToolbarModule,
+    LayoutModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
