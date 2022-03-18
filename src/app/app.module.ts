@@ -1,11 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {MatToolbarModule } from '@angular/material/toolbar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import { NbThemeModule, NbLayoutModule} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AboutComponent } from './pages/about/about.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -42,6 +41,9 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { GreenCraftNavComponent } from './pages/green-craft/green-craft-nav/green-craft-nav.component';
+import { HearthCraftNavComponent } from './pages/hearth-craft/hearth-craft-nav/hearth-craft-nav.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { MatListModule } from '@angular/material/list';
     NavigationComponent,
     FooterComponent,
     DivinationNavComponent,
+    GreenCraftNavComponent,
+    HearthCraftNavComponent,
   ],
   imports: [
     BrowserModule,

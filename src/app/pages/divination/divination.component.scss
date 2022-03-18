@@ -1,3 +1,9 @@
+.container {
+  background-color: bisque;
+  height: 100%;
+  font-family: "Playfair Display", serif;
+}
+
 #jumbotron {
   background-image: url("../../../assets/images/divination.jpeg");
   background-size: cover;
@@ -8,10 +14,11 @@
 }
 
 h1{
-    background-color: white;
     width: 30%;
     margin: 0 auto;
     text-align: center;
     padding: 10px;
-    border-radius: 10px;
+}
+P {
+  padding: 10px;
 }
